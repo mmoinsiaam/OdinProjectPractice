@@ -23,6 +23,7 @@ body {
 .footer {
     background-color: #1f2937;
     color: #E5E7EB;
+    justify-content: center;
 }
 
 a {
@@ -37,25 +38,28 @@ a {
 .header {
     display: flex;
     flex: 1;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     text-wrap: nowrap;
     margin-bottom: 100px;
 }
 
 .left-head {
+    display: flex;
+    justify-content: end;
     font-size: 24px;
     color: #F9FAF8;
     font-weight: bold;
-    flex: auto;
-    max-width: 500px;
+    flex: 1;
+    max-width: 255px;
 }
 
 .right-head {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     flex: 1;
     font-weight: lighter;
+    max-width: 400px;
 }
 
 .intro {
@@ -158,7 +162,8 @@ img {
     display: flex;
     flex-direction: column;
     flex: 1;
-    color:#1f2937
+    color:#1f2937;
+    max-width: 1200px;
 }
 
 #quote {
@@ -190,7 +195,7 @@ img {
     background-color: #3882F6;
     border-radius: 5px;
     padding: 20px 150px;
-    gap: 120px;
+    gap: 200px;
 }
 
 .sign-text {
@@ -218,4 +223,13 @@ img {
     border-radius: 6px;
     text-wrap: nowrap;
     align-self: center;
+}
+
+/*Footer individual styling starts here*/
+
+.footer {
+    padding: 40px 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
