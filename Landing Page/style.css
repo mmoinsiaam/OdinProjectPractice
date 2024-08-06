@@ -175,6 +175,47 @@ img {
     text-align: end;
 }
 
+/*Section 4 individual styling starts here*/
 
+.section-4 {
+    justify-content: center;
+    align-items: center;
+    color: #F9FAF8;
+    padding: 60px 150px;
+}
 
+.blue-box {
+    display: flex;
+    flex: auto;
+    background-color: #3882F6;
+    border-radius: 5px;
+    padding: 20px 150px;
+    gap: 120px;
+}
 
+.sign-text {
+    flex: 1;
+}
+
+#p1 {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+
+#p2 {
+    margin-top: 5px;
+}
+
+.sign2 {
+    font-size: medium;
+    padding: 5px 45px;
+    max-height: 40px;
+    color: #E5E7EB;
+    border: 3px solid #F9FAF8;
+    font-weight: bolder;
+    background-color: #3882F6;
+    border-radius: 6px;
+    text-wrap: nowrap;
+    align-self: center;
+}
