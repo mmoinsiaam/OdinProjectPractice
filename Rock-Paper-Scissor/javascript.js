@@ -79,3 +79,5 @@ if(computerScore > humanScore){
 }else{
     conclusion = "DRAW!";
 }
+
+document.getElementById("conclusion").innerHTML = conclusion;
