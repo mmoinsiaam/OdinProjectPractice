@@ -10,12 +10,16 @@ function addItem() {
     const listItem = document.createElement("li");
     const span = document.createElement("span");
     const deleteBtn = document.createElement("button");
+    span.textContent = itemName;
+    deleteBtn.textContent = "Delete";
 
-    listItem.appendChild(deleteBtn);
     listItem.appendChild(span);
+    listItem.appendChild(deleteBtn);
 
     list.appendChild(listItem);
 
-    deleteBtn.addEventListener("click", deleteItem);
+    deleteBtn.addEventListener("click", function (e) {
+        e.target.parentElement.remove();
+    });
     input.focus();
 }
