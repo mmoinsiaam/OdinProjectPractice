@@ -16,10 +16,43 @@ body {
 
 .row {
     flex: 1;
+    display: flex;
+    gap: 3px;
+    margin: 0px 5px;
 }
 
 #display {
-    background-color: gray;
+    background-color: #B2B9B7;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
+}
+
+.number,
+.operator,
+#clear {
+    flex: 1;
+    border-radius: 6px;
+    border: 0;
+}
+
+button:active {
+    filter: brightness(130%);
+    transform: translateY(4px);
+}
+
+.number {
+    background-color: teal;
+}
+
+#clear,
+#zero {
+    flex: 3.25 1 0;
+}
+
+#clear {
+    background-color: #1E90FF;
+}
+
+.operator {
+    background-color: darkorange;
 }
