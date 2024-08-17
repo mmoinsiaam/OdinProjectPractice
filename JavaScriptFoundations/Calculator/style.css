@@ -10,4 +10,16 @@ body {
     border: 10px solid rgb(56, 68, 68);
     margin-top: 20vh;
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.row {
+    flex: 1;
+}
+
+#display {
+    background-color: gray;
+    margin: 5px;
+    padding: 5px;
 }
