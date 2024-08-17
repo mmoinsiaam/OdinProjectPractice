@@ -8,7 +8,7 @@ body {
     height: 514px;
     width: 406px;
     border: 10px solid rgb(56, 68, 68);
-    margin-top: 20vh;
+    margin-top: 10vh;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -29,6 +29,7 @@ body {
 
 .number,
 .operator,
+.equals,
 #clear {
     flex: 1;
     border-radius: 6px;
@@ -53,6 +54,7 @@ button:active {
     background-color: #1E90FF;
 }
 
-.operator {
+.operator,
+.equals {
     background-color: darkorange;
 }

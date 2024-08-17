@@ -1,3 +1,14 @@
+let arr = [];
+
+let buttons = document.querySelectorAll(".number,.operator");
+let clearBtn = document.querySelector("#clear");
+
+for(let i = 0; i < buttons.length; i++){
+    buttons[i].addEventListener("click",populateDisplay);
+}
+
+clearBtn.addEventListener("click",clear);
+
 function add(num1,num2){
     return num1 + num2;
 }
@@ -25,3 +36,4 @@ function operate(operator,num1,num2){
         return divide(num1,num2);
     }
 }
+
