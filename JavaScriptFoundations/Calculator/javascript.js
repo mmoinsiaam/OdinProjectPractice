@@ -66,10 +66,6 @@ function displayNum(e) {
         arr[2] = arr[2] + "" + val;
         display.textContent = arr[2];
     }
-
-    if(arr.length > 3){
-        
-    }
     console.log(arr);
 }
 
@@ -80,6 +76,16 @@ function addOperator(e) {
         return;
     }
     arr.push(val);
+    if(arr.length > 3){
+        arr[0] = operate(arr[1],parseInt(arr[0]),parseInt(arr[2]));
+        arr[1] = arr[3];
+        arr.pop();
+        arr.pop();
+        display.textContent = arr[0];
+        console.log(arr);
+        return;
+    }   
+    console.log(arr);
 }
 
 function clear() {
