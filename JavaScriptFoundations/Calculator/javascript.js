@@ -2,15 +2,20 @@ let arr = [];
 
 let display = document.querySelector("#display");
 
-let buttons = document.querySelectorAll(".number,.operator");
+let numbers = document.querySelectorAll(".number");
+let operators = document.querySelectorAll(".operator");
 let clearBtn = document.querySelector("#clear");
 let equalsBtn = document.querySelector(".equals");
 
-for(let i = 0; i < buttons.length; i++){
-    buttons[i].addEventListener("click",populateDisplay);
+for(let i = 0; i < numbers.length; i++){
+    numbers[i].addEventListener("click",displayNum);
 }
 
-//clearBtn.addEventListener("click",clear);
+for(let i = 0; i < operators.length; i++){
+    operators[i].addEventListener("click",addOperator);
+}
+
+clearBtn.addEventListener("click",clear);
 //equalsBtn.addEventListener("click",evaluate);
 
 function add(num1,num2){
@@ -46,14 +51,31 @@ function operate(operator,num1,num2){
     }
 }
 
-function populateDisplay(e) { 
+function displayNum(e) { 
     let val = e.target.textContent;
-    if(isNaN(val)){
-        display.textContent = display.textContent + " " + val + " ";
-    }else{
-        display.textContent = display.textContent + val;
+    if(arr.length === 0){
+        arr.push(val);
+        display.textContent = arr[0];
+    }else if(arr.length === 1){
+        arr[0] = arr[0] + "" + val; 
+        display.textContent = arr[0];
+    }else if(arr.length === 2){
+        arr.push(val);
+        display.textContent = arr[2];
+    }else if(arr.length === 3){
+        arr[2] = arr[2] + "" + val;
+        display.textContent = arr[2];
     }
-    arr = display.textContent.split(" ").filter((word) => word !== "");
+
     console.log(arr);
 }
 
+function addOperator(e) {
+    arr.push(e.target.textContent);
+}
+
+function clear() {
+    display.textContent = "";
+    arr = [];
+    console.log(arr);
+}
