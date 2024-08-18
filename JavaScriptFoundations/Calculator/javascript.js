@@ -16,7 +16,7 @@ for(let i = 0; i < operators.length; i++){
 }
 
 clearBtn.addEventListener("click",clear);
-//equalsBtn.addEventListener("click",evaluate);
+equalsBtn.addEventListener("click",evaluate);
 
 function add(num1,num2){
     return num1 + num2;
@@ -77,12 +77,7 @@ function addOperator(e) {
     }
     arr.push(val);
     if(arr.length > 3){
-        arr[0] = operate(arr[1],parseInt(arr[0]),parseInt(arr[2]));
-        arr[1] = arr[3];
-        arr.pop();
-        arr.pop();
-        display.textContent = arr[0];
-        console.log(arr);
+        evaluate();
         return;
     }   
     console.log(arr);
@@ -101,4 +96,18 @@ function isValid(val) { //returns 0 if not valid, 1 if valid
         return 0;
     }
     return 1;
+}
+
+function evaluate() {
+    if(arr.length < 3){
+        alert("invalid input");
+    }else{
+        arr[0] = operate(arr[1],parseInt(arr[0]),parseInt(arr[2]));
+        arr[1] = arr[3];
+        arr.pop();
+        arr.pop();
+        display.textContent = arr[0];
+        console.log(arr);
+        return;
+    }
 }
