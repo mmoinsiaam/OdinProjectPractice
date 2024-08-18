@@ -57,7 +57,10 @@ function displayNum(e) {
         arr.push(val);
         display.textContent = arr[0];
     }else if(arr.length === 1){
-        arr[0] = arr[0] + "" + val; 
+        arr[0] = arr[0] + "" + val;
+        if(overflowErr(arr[0])){
+            return;
+        }
         display.textContent = arr[0];
     }else if(arr.length === 2){
         arr.push(val);
@@ -65,6 +68,9 @@ function displayNum(e) {
     }else if(arr.length === 3){
         arr[2] = arr[2] + "" + val;
         display.textContent = arr[2];
+        if(overflowErr(arr[2])){
+            return;
+        }
     }
     console.log(arr);
 }
@@ -105,7 +111,10 @@ function evaluate() {
         alert("Invalid Input");
         return;
     }else{
-        arr[0] = operate(arr[1],parseInt(arr[0]),parseInt(arr[2]));
+        arr[0] = operate(arr[1],parseInt(arr[0]),parseInt(arr[2])) + "";
+        if(overflowErr(arr[0])){
+            return;
+        }
         arr[1] = arr[3];
         arr.pop();
         arr.pop();
@@ -113,4 +122,13 @@ function evaluate() {
         console.log(arr);
         return;
     }
+}
+
+function overflowErr(val) {
+    if(val.length > 10){
+        alert("Overflow error");
+        clear();
+        return 1;
+    } 
+    return 0;
 }
