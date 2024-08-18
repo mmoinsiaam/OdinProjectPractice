@@ -72,7 +72,7 @@ function displayNum(e) {
 function addOperator(e) {
     let val = e.target.textContent;
     if(!isValid(val)){
-        alert("Invalid Input");
+        alert("Invalid Input. Please press clear.");
         return;
     }
     arr.push(val);
@@ -100,7 +100,10 @@ function isValid(val) { //returns 0 if not valid, 1 if valid
 
 function evaluate() {
     if(arr.length < 3){
-        alert("invalid input");
+        alert("Invalid input");
+    }else if(arr[1] === "/" && arr[2] === "0"){
+        alert("Invalid Input");
+        return;
     }else{
         arr[0] = operate(arr[1],parseInt(arr[0]),parseInt(arr[2]));
         arr[1] = arr[3];
