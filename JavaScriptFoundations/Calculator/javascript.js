@@ -67,15 +67,32 @@ function displayNum(e) {
         display.textContent = arr[2];
     }
 
+    if(arr.length > 3){
+        
+    }
     console.log(arr);
 }
 
 function addOperator(e) {
-    arr.push(e.target.textContent);
+    let val = e.target.textContent;
+    if(!isValid(val)){
+        alert("Invalid Input");
+        return;
+    }
+    arr.push(val);
 }
 
 function clear() {
     display.textContent = "";
     arr = [];
     console.log(arr);
+}
+
+function isValid(val) { //returns 0 if not valid, 1 if valid
+    if(arr.length === 0 && isNaN(val)){
+        return 0;
+    }else if(arr.length === 2 && isNaN(val)){
+        return 0;
+    }
+    return 1;
 }
