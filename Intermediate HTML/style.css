@@ -89,9 +89,48 @@ p {
     font-family: 'Times New Roman', Times, serif;
 }
 
-
 .box2 {
     flex: 1;
+    margin-left: 50px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.boxer {
+    margin-top: -20px;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.boxy {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    flex: 0.3;
+    justify-content: space-evenly;
+}
+
+.labname {
+    margin-top: 4px;
+    padding-bottom: 7px;
+    border-radius: 5px;
+    border-color: #E5E7EB;
+    border-width: 1.5px;
+}
+
+.labtext {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.labname:invalid {
+    border-color: red;
+    box-shadow: none;
+    outline-color: none;
 }
 
 .box3 {
