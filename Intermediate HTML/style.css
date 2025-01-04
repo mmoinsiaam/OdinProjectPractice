@@ -76,7 +76,7 @@ body {
 
 .box1 {
     background-color: rgb(244, 244, 244);
-    flex: 1.2;
+    flex: 1.01;
     justify-content: flex-start;
     align-content: flex-end;
 }
@@ -136,4 +136,28 @@ p {
 .box3 {
     background-color: rgb(244, 244, 244);
     flex: 1;
+}
+
+#cac {
+    margin: 50px;
+    background-color: #596D48;
+    height: 50px;
+    width: 15vw;
+    border-radius: 5px;
+    border-color: #596D48;
+    box-shadow: 2px;
+    font-size: large;
+    color: white;
+    font-weight: lighter;
+}
+
+#account {
+    margin-left: 50px;
+    margin-top: -20px;
+    font-size:large;
+    font-weight: normal;
+}
+
+#login {
+    color:#596D48;
 }

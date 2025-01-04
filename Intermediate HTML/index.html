@@ -24,18 +24,18 @@
                 <div class="boxer">
                 <div class="row">
                     <div class="boxy">
-                        <label for="fname" class="labtext">*First Name:</label>
-                        <input type="text" class="labname" name="fname" minlength="3" required>
+                        <label for="fname" class="labtext" id="fn">First Name:</label>
+                        <input type="text" class="labname" id="namef" name="fname" minlength="3" required>
                     </div>
                     <div class="boxy">
-                        <label for="lname" class="labtext">*Last Name:</label>
-                        <input type="text" class="labname" name="lname" minlength="3" required>
+                        <label for="lname" class="labtext" id="ln">Last Name:</label>
+                        <input type="text" class="labname" id="namel" name="lname" minlength="3" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="boxy">
-                        <label for="email" class="labtext">*Email:</label>
-                        <input type="email" class="labname" name="email" required>
+                        <label for="email" class="labtext" id="em">Email:</label>
+                        <input type="email" class="labname" id="email" name="email" required>
                     </div>
                     <div class="boxy">
                         <label for="phone" class="labtext">Phone Number:</label>
@@ -44,18 +44,22 @@
                 </div>
                 <div class="row">
                     <div class="boxy">
-                        <label for="pword" class="labtext">*Password:</label>
-                        <input type="password" class="labname pass" name="pword" minlength="3" required>
+                        <label for="pword" class="labtext" id="prl">Password:</label>
+                        <input type="password" class="labname pass" id="prn" name="pword" minlength="3" required>
                     </div>
                     <div class="boxy">
-                        <label for="pword2" class="labtext">*Confirm Password:</label>
-                        <input type="password" class="labname pass" name="pword2" minlength="3" required>
+                        <label for="pword2" class="labtext" id="prl2">Confirm Password:</label>
+                        <input type="password" class="labname pass" id="prn2" name="pword2" minlength="3" required>
                     </div>
                 </div>
                 </div>
             </form> 
         </div>
-        <div class="box3"></div>
+        <div class="box3">
+            <button id="cac">Create Account</button>
+            <br>
+            <p id="account">Already have an account? <span id="login">Log in</span></p>
+        </div>
     </div>
 </body>
 </html>
