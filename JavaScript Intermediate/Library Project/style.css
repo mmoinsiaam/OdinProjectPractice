@@ -1,13 +1,13 @@
 body {
-    background-color: grey;
-}
-
-ul {
-    list-style-type: none;
+    background-image: url("wakl.jpeg");
 }
   
-li {
-    margin: 10px 0;
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin-bottom: 2vw;
+    margin-left: 4vw;
+    text-wrap: wrap;
 }
 
 .holder {
@@ -17,11 +17,31 @@ li {
     gap: 30px;
     grid-auto-rows: 14vw;
     grid-auto-columns: 14vw;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .book {
-    background-color: white;
+    background-image: url("book.png");
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:black;
-    text-wrap: pretty;
+    contain: strict;
+    overflow-x: scroll;
+}
+
+.remove, .statchange {
+    margin-left: 4vw;
+    border-radius: 5px;
+}
+
+.remove {
+    background-color: darkred;
+    border-color: darkred;
+    color: white;
+}
+
+.statchange {
+    background-color: green;
+    color: white;
+    border-color: green;
 }
