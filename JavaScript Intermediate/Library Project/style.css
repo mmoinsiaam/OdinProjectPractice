@@ -27,6 +27,8 @@ p {
     color:black;
     contain: strict;
     overflow-x: scroll;
+    border-radius: 2px;
+    border-color: darkgreen;
 }
 
 .remove, .statchange {
