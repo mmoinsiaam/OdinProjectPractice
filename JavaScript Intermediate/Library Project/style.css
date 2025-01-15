@@ -47,3 +47,19 @@ p {
     color: white;
     border-color: green;
 }
+
+#close, #submitb {
+    margin-top: 10px;
+}
+
+#addbut {
+    position: sticky;
+    margin-left: 5vw;
+    top: 10vh;
+    height: 50px;
+    width: 100px;
+    background-color: green;
+    color: white;
+    border-color: green;
+    border-radius: 10px;
+}

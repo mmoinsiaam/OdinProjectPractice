@@ -8,6 +8,32 @@
     <title>Library</title>
 </head>
 <body>
+    <dialog id="dlog">
+        <form id="f">
+            <fieldset>
+              <legend>Input Book Details</legend>
+              <div>
+                <label for="name">Title: </label>
+                <input type="text" id="name" name="name" required/>
+              </div>
+              <div>
+                <label for="pwd">Author: </label>
+                <input type="text" id="pwd" name="auth" required/>
+              </div>
+              <div>
+                <label for="pageform">Pages: </label>
+                <input type="text" inputmode="numeric" name="pageform" id="pageform" required/>
+              </div>
+              <div>
+                <label for="rstat">Read: </label>
+                <input type="checkbox" id="rstat" name="rstat" value="Read"/>
+              </div>
+            </fieldset>
+            <input id="submitb" type="submit" value="Submit"/>
+          </form>
+          <button id="close" autofocus>Close</button>
+    </dialog>
+    <button id="addbut">Add Book</button>
     <div id="bookholder" class="holder"></div>
 </body>
 </html>

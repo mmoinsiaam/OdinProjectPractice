@@ -26,9 +26,8 @@ function remFromLibrary(name) {
     }
 }
 
-for (let index = 0; index < myLibrary.length; index++) {
-    console.log(myLibrary);
-    const tempBook = myLibrary[index];
+
+function makeCard(tempBook) {
     const temp = document.createElement("div");
     temp.classList.add("book");
     const Title = document.createElement("p");
@@ -76,6 +75,42 @@ for (let index = 0; index < myLibrary.length; index++) {
     });
 
     holder.appendChild(temp);
-    console.log("hi");
 }
 
+
+for (let index = 0; index < myLibrary.length; index++) {
+    const tempBook = myLibrary[index];
+    makeCard(tempBook);
+}
+
+const addbutton = document.getElementById("addbut");
+const dialog = document.getElementById("dlog");
+const close = document.querySelector("dialog button");
+
+addbutton.addEventListener("click", () => {
+    dialog.showModal();
+});
+
+close.addEventListener("click", () => {
+    dialog.close();
+});
+
+const form = document.getElementById("f");
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const name = formData.get('name');
+    const auth = formData.get('auth');
+    const pages = formData.get('pageform');
+    const rstat = formData.get('rstat');
+
+    if (rstat === 'Read'){
+        addBookToLibrary(name,auth,pages,rstat);
+    }else {
+        addBookToLibrary(name,auth,pages,"Not Read");
+    }
+    
+    const book = myLibrary[myLibrary.length - 1];
+    makeCard(book);
+});
