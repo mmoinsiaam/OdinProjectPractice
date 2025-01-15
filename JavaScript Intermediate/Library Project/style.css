@@ -1,7 +1,22 @@
 body {
     background-image: url("wakl.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
-  
+ 
+#container p{
+    z-index: 1;
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: fixed;
+    right: -50%;
+    background-color: burlywood;
+    padding: 1vh;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
 p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
@@ -63,3 +78,4 @@ p {
     border-color: green;
     border-radius: 10px;
 }
+

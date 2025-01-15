@@ -1,5 +1,7 @@
 const myLibrary = [];
 const holder = document.getElementById("bookholder");
+const notif = document.querySelector("#container p");
+const sub = document.getElementById("submitb");
 
 function Book(title,author,pages,readstat) {
     this.title = title;
@@ -15,7 +17,11 @@ function addBookToLibrary(title,author,pages,readstat) {
 }
 
 for (let index = 0; index < 50; index++) {
-    addBookToLibrary("asd" + index,"tqer",index,"Not Read");
+    var rstat = "Read";
+    if (index % 2 == 0) {
+        rstat = "Not Read";
+    }
+    addBookToLibrary("Book" + index,"Author" + index, index, rstat);
 }
 
 function remFromLibrary(name) {
@@ -113,4 +119,11 @@ form.addEventListener('submit', (e) => {
     
     const book = myLibrary[myLibrary.length - 1];
     makeCard(book);
+    notif.style.right = "2%";
+    sub.disabled = true;
+
+    setTimeout(() => {
+        notif.style.right = "-50%";
+        sub.disabled = false;
+    }, 4000)
 });
