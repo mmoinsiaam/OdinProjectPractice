@@ -16,7 +16,7 @@ function addBookToLibrary(title,author,pages,readstat) {
     console.log("hasd");
 }
 
-for (let index = 0; index < 50; index++) {
+for (let index = 0; index < 10; index++) {
     var rstat = "Read";
     if (index % 2 == 0) {
         rstat = "Not Read";
